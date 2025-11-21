@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height:100vh;
+            width:100vw;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+        #face{
+            height:400px;
+            width:400px;
+            border:1px solid;
+            border-radius: 50%;
+            background-color: yellow;
+
+        }
+        #eye-container{
+            height:100px;
+            width: 100%;
+            position:relative;
+            top:80px;
+            display:flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .eyes{
+            height:100px;
+            width: 50px;
+            border: 1px solid;
+            border-radius: 50%;
+            background-color: #ffffff;
+        }
+        .eyeball{
+            height:50%;
+            width:60%;
+            border:1px solid;
+            border-radius: 50%;
+            background-color: black;
+            position:relative;
+            top:50px;
+            left:10px;
+            animation: eyeroll is linear  infinite alternate ;
+
+        }
+        #mouth{
+            height:2px;
+            width:120px;
+            border:2px solid;
+            background-color: black;;
+            position:relative;
+            top:200px;
+            left:140px;
+            animation: mouth is linear infinite alternate;
+
+
+
+        }
+        @keyframes eyeroll{
+            10%{
+                transform: translate(0px,-20px);
+            }
+            50%{
+                transform:translate(0px,-40px);
+            }
+            100%{
+                transform:translate(0px, -50px);
+            }
+        }
+        @keyframes shock{
+            10%{
+                height: 20px;
+                width:20px;
+                border-radius: 50%;
+            }
+            50%{
+                height:40px;
+            }
+        
+            100%{
+            height:70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="face">
+        <div id="eye-container">
+            <div class="eyes">
+                <div class="eyeball"></div>
+            </div>
+            <div class="eyes">
+                <div class="eyeball"></div>
+            </div>
+        </div>
+        <div id="mouth"></div>
+    </div> 
+</body>
+</html>
